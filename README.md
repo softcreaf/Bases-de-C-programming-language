@@ -22,7 +22,7 @@ int main(void)
 * export CFILE=main.c
 * ./0 preprocessor
 * tail c
-<br>
+
 ```
 # 942 "/usr/include/stdio.h" 3 4
 
