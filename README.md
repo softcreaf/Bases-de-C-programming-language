@@ -61,8 +61,7 @@ int main(void)
 
 * ./1-compiler
 * ls<br>
-0-preprocessor  1-compiler   c            main.o
-<br>
+0-preprocessor  1-compiler   c            main.o<br>
 Makefile               100-intel      main.c  main.s
 * cat -v main.o | head
 
