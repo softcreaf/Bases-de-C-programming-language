@@ -35,14 +35,16 @@ int main(void)
  return (0);
 }
 ```
+
 ## 1. Compiler
 Write a script that compiles a C file but does not link.
 * The C file name will be saved in the variable $CFILE
 * The output file should be named the same as the C file, but with the extension .o instead of .c
-* Example: if the C file is main.c, the output file should be main.o
-<br>
-- export CFILE=main.c
-- cat main.c
+* Example: if the C file is main.c, the output file should be main.o.<br>
+
+* export CFILE=main.c
+* cat main.c
+
 ```
 #include <stdio.h>
 
@@ -56,6 +58,7 @@ int main(void)
     return (0);
 }
 ```
+
 - ./1-compiler
 - ls
 0-preprocessor  1-compiler   c            main.o
