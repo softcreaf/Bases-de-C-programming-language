@@ -60,7 +60,7 @@ int main(void)
 ```
 
 * ./1-compiler
-* ls
+* ls<br>
 0-preprocessor  1-compiler   c            main.o
 <br>
 Makefile               100-intel      main.c  main.s
