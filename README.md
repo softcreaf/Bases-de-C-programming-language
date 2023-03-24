@@ -187,5 +187,5 @@ Size of a long int: 8 byte(s)
 Size of a long long int: 8 byte(s)
 Size of a float: 4 byte(s)
 ```
-** echo $?
+** echo $?<br>
 0
