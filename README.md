@@ -70,3 +70,51 @@ Makefile               100-intel      main.c  main.s<br>
 ^@^@^@^H^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@  ^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^P^A^@^@^@^@^@^@^M^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^
 ```
 
+## 2.Assembler
+Write a script that generates the assembly code of a C code and save it in an output file.
+* The C file name will be saved in the variable $CFILE
+* The output file should be named the same as the C file, but with the extension .s instead of .c
+* Example: if the C file is main.c, the output file should be main.s<br>
+** export CFILE=main.c
+** cat main.c
+
+```
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+```
+** ./2-assembler<br>
+** ls<br>
+0-preprocessor  1-compiler  2-assembler c  main.c  main.s  Makefile<br>
+** cat main.c
+```
+.file   "main.c"
+    .text
+    .globl  main
+    .type   main, @function
+main:
+.LFB0:
+    .cfi_startproc
+    pushq   %rbp
+    .cfi_def_cfa_offset 16
+    .cfi_offset 6, -16
+    movq    %rsp, %rbp
+    .cfi_def_cfa_register 6
+    movl    $0, %eax
+    popq    %rbp
+    .cfi_def_cfa 7, 8
+    ret
+    .cfi_endproc
+.LFE0:
+    .size   main, .-main
+    .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
+    .section    .note.GNU-stack,"",@progbits
+```
